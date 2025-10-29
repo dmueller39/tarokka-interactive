@@ -90,12 +90,6 @@ function App() {
     setIsReading(true);
   };
 
-  const handleReset = () => {
-    setIsReading(false);
-    setDrawnCards([]);
-    setReadingText("");
-  };
-
   const handleCopyToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(readingText);

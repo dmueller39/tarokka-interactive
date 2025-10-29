@@ -14,7 +14,6 @@ interface CardProps {
 export const Card: React.FC<CardProps> = ({
   card,
   isRevealed,
-  onClick,
   delay = 0,
   position = { x: 0, y: 0 },
   isZoomed = false

@@ -21,7 +21,7 @@ export const Coverflow: React.FC<CoverflowProps> = ({ cards }) => {
   useEffect(() => {
     if (shuffledCards.length === 0) return;
 
-    let interval: NodeJS.Timeout;
+    let interval: number;
 
     // Initial advance after 2 seconds
     const initialTimeout = setTimeout(() => {
