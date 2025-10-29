@@ -92,12 +92,6 @@ src/
 
 ## Features
 
-### Animated Coverflow
-- Smooth spring-based animations powered by Framer Motion
-- Cards automatically cycle through the deck
-- Tilted 3D perspective for depth
-- Responsive sizing based on viewport height
-
 ### Reading Generation
 - Complete reading guide with flavor text for each card position
 - Support for multiple enemy options (pick one format)
