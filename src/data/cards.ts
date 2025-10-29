@@ -1,5 +1,11 @@
 import { TarokkaCard } from "../types/tarokka";
 
+// Helper function to get the correct asset path with base URL
+const getAssetPath = (path: string) => {
+  const base = import.meta.env.BASE_URL || '/';
+  return `${base}${path.startsWith('/') ? path.slice(1) : path}`;
+};
+
 export const tarokkaDeck: TarokkaCard[] = [
   // High Deck (14 cards)
   {
@@ -7,7 +13,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     name: "The Artifact",
     suit: "high",
     inRavenloft: true,
-    imageUrl: "/assets/cards/artifact.png",
+    imageUrl: getAssetPath("/assets/cards/artifact.png"),
     flavorText:
       "He lurks in the darkness where the morning light once shone—a sacred place.",
     explanation: "Strahd faces the characters in the chapel (area K15).",
@@ -23,7 +29,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     name: "The Beast",
     suit: "high",
     inRavenloft: true,
-    imageUrl: "/assets/cards/beast.png",
+    imageUrl: getAssetPath("/assets/cards/beast.png"),
     flavorText: "The beast sits on his dark throne.",
     explanation: "Strahd faces the characters in the audience hall (area K25).",
     enemies: [
@@ -38,7 +44,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     name: "The Broken One",
     suit: "high",
     inRavenloft: true,
-    imageUrl: "/assets/cards/broken-one.png",
+    imageUrl: getAssetPath("/assets/cards/broken-one.png"),
     flavorText: "He haunts the tomb of the man he envied above all.",
     explanation: "Strahd faces the characters in Sergei's tomb (area K85).",
     enemies: [
@@ -57,7 +63,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     name: "The Darklord",
     suit: "high",
     inRavenloft: true,
-    imageUrl: "/assets/cards/darklord.png",
+    imageUrl: getAssetPath("/assets/cards/darklord.png"),
     flavorText:
       "He lurks in the depths of darkness, in the one place to which he must return.",
     explanation: "Strahd faces the characters in his tomb (area K86).",
@@ -73,7 +79,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     name: "The Donjon",
     suit: "high",
     inRavenloft: true,
-    imageUrl: "/assets/cards/donjon.png",
+    imageUrl: getAssetPath("/assets/cards/donjon.png"),
     flavorText: "He lurks in a hall of bones, in the dark pits of his castle.",
     explanation: "Strahd faces the characters in the hall of bones (area K67).",
     enemies: [
@@ -92,7 +98,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     name: "The Executioner",
     suit: "high",
     inRavenloft: true,
-    imageUrl: "/assets/cards/executioner.png",
+    imageUrl: getAssetPath("/assets/cards/executioner.png"),
     flavorText:
       "I see a dark figure on a balcony, looking down upon this tortured land with a twisted smile.",
     explanation: "Strahd faces the characters at the overlook (area K6).",
@@ -108,7 +114,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     name: "The Ghost",
     suit: "high",
     inRavenloft: true,
-    imageUrl: "/assets/cards/ghost.png",
+    imageUrl: getAssetPath("/assets/cards/ghost.png"),
     flavorText: "Look to the father's tomb.",
     explanation:
       "Strahd faces the characters in the tomb of King Barov and Queen Ravenovia (area K88).",
@@ -128,7 +134,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     name: "The Horseman",
     suit: "high",
     inRavenloft: true,
-    imageUrl: "/assets/cards/horseman.png",
+    imageUrl: getAssetPath("/assets/cards/horseman.png"),
     flavorText:
       "He lurks in the one place to which he must return—a place of death.",
     explanation: "Strahd faces the characters in his tomb (area K86).",
@@ -148,7 +154,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     name: "The Innocent",
     suit: "high",
     inRavenloft: true,
-    imageUrl: "/assets/cards/innocent.png",
+    imageUrl: getAssetPath("/assets/cards/innocent.png"),
     flavorText:
       "He dwells with the one whose blood sealed his doom, a brother of light snuffed out too soon.",
     explanation: "Strahd faces the characters in Sergei's tomb (area K85).",
@@ -168,7 +174,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     name: "The Marionette",
     suit: "high",
     inRavenloft: true,
-    imageUrl: "/assets/cards/marionette.png",
+    imageUrl: getAssetPath("/assets/cards/marionette.png"),
     flavorText:
       "Look to great heights. Find the beating heart of the castle. He waits nearby.",
     explanation:
@@ -189,7 +195,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     name: "The Mists",
     suit: "high",
     inRavenloft: true,
-    imageUrl: "/assets/cards/mists.png",
+    imageUrl: getAssetPath("/assets/cards/mists.png"),
     flavorText:
       "The cards can't see where the evil lurks. The mists obscure all!",
     explanation:
@@ -206,7 +212,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     name: "The Raven",
     suit: "high",
     inRavenloft: true,
-    imageUrl: "/assets/cards/raven.png",
+    imageUrl: getAssetPath("/assets/cards/raven.png"),
     flavorText: "Look to the mother's tomb.",
     explanation:
       "Strahd faces the characters in the tomb of King Barov and Queen Ravenovia (area K88).",
@@ -222,7 +228,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     name: "The Seer",
     suit: "high",
     inRavenloft: true,
-    imageUrl: "/assets/cards/seer.png",
+    imageUrl: getAssetPath("/assets/cards/seer.png"),
     flavorText:
       "He waits for you in a place of wisdom, warmth, and despair. Great secrets are there.",
     explanation: "Strahd faces the characters in the study (area K37).",
@@ -238,7 +244,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     name: "The Tempter",
     suit: "high",
     inRavenloft: true,
-    imageUrl: "/assets/cards/tempter.png",
+    imageUrl: getAssetPath("/assets/cards/tempter.png"),
     flavorText:
       "I see a secret place—a vault of temptation hidden behind a woman of great beauty. The evil waits atop his tower of treasure.",
     explanation:
@@ -260,7 +266,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "swords-1",
     name: "Avenger",
     suit: "swords",
-    imageUrl: "/assets/cards/avenger.png",
+    imageUrl: getAssetPath("/assets/cards/avenger.png"),
     flavorText:
       "The treasure lies in a dragon's house, in hands once clean and now corrupted.",
     explanation:
@@ -270,7 +276,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "swords-2",
     name: "Paladin",
     suit: "swords",
-    imageUrl: "/assets/cards/paladin.png",
+    imageUrl: getAssetPath("/assets/cards/paladin.png"),
     flavorText:
       "I see a sleeping prince, a servant of light and the brother of darkness. The treasure lies with him.",
     explanation: "The treasure lies in Sergei's tomb (chapter 4, area K85).",
@@ -280,7 +286,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "swords-3",
     name: "Soldier",
     suit: "swords",
-    imageUrl: "/assets/cards/soldier.png",
+    imageUrl: getAssetPath("/assets/cards/soldier.png"),
     flavorText:
       "Go to the mountains. Climb the white tower guarded by golden knights.",
     explanation:
@@ -290,7 +296,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "swords-4",
     name: "Mercenary",
     suit: "swords",
-    imageUrl: "/assets/cards/mercenary.png",
+    imageUrl: getAssetPath("/assets/cards/mercenary.png"),
     flavorText:
       "The thing you seek lies with the dead, under mountains of gold coins.",
     explanation:
@@ -301,7 +307,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "swords-5",
     name: "Myrmidon",
     suit: "swords",
-    imageUrl: "/assets/cards/myrmidon.png",
+    imageUrl: getAssetPath("/assets/cards/myrmidon.png"),
     flavorText:
       "Look for a den of wolves in the hills overlooking a mountain lake. The treasure belongs to Mother Night.",
     explanation:
@@ -311,7 +317,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "swords-6",
     name: "Berserker",
     suit: "swords",
-    imageUrl: "/assets/cards/berserker.png",
+    imageUrl: getAssetPath("/assets/cards/berserker.png"),
     flavorText:
       "Find the Mad Dog's crypt. The treasure lies within, beneath blackened bones.",
     explanation:
@@ -321,7 +327,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "swords-7",
     name: "Hooded One",
     suit: "swords",
-    imageUrl: "/assets/cards/hooded-one.png",
+    imageUrl: getAssetPath("/assets/cards/hooded-one.png"),
     flavorText:
       "I see a faceless god. He awaits you at the end of a long and winding road, deep in the mountains.",
     explanation:
@@ -331,7 +337,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "swords-8",
     name: "Dictator",
     suit: "swords",
-    imageUrl: "/assets/cards/dictator.png",
+    imageUrl: getAssetPath("/assets/cards/dictator.png"),
     flavorText: "I see a throne fit for a king.",
     explanation:
       "The treasure lies in Castle Ravenloft's audience hall (chapter 4, area K25).",
@@ -341,7 +347,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "swords-9",
     name: "Torturer",
     suit: "swords",
-    imageUrl: "/assets/cards/torturer.png",
+    imageUrl: getAssetPath("/assets/cards/torturer.png"),
     flavorText:
       "There is a town where all is not well. There you will find a house of corruption, and within, a dark room full of still ghosts.",
     explanation:
@@ -351,7 +357,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "swords-master",
     name: "Warrior",
     suit: "swords",
-    imageUrl: "/assets/cards/warrior.png",
+    imageUrl: getAssetPath("/assets/cards/warrior.png"),
     flavorText:
       "That which you seek lies in the womb of darkness, the devil's lair: the one place to which he must return.",
     explanation: "The treasure lies in Strahd's tomb (chapter 4, area K86).",
@@ -363,7 +369,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "stars-1",
     name: "Transmuter",
     suit: "stars",
-    imageUrl: "/assets/cards/transmuter.png",
+    imageUrl: getAssetPath("/assets/cards/transmuter.png"),
     flavorText:
       "Go to a place of dizzying heights, where the stone itself is alive!",
     explanation:
@@ -374,7 +380,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "stars-2",
     name: "Diviner",
     suit: "stars",
-    imageUrl: "/assets/cards/diviner.png",
+    imageUrl: getAssetPath("/assets/cards/diviner.png"),
     flavorText:
       "Look to the one who sees all. The treasure is hidden in her camp.",
     explanation:
@@ -384,7 +390,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "stars-3",
     name: "Enchanter",
     suit: "stars",
-    imageUrl: "/assets/cards/enchanter.png",
+    imageUrl: getAssetPath("/assets/cards/enchanter.png"),
     flavorText:
       "I see a kneeling woman—a rose of great beauty plucked too soon. The master of the marsh knows of whom I speak.",
     explanation:
@@ -394,7 +400,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "stars-4",
     name: "Abjurer",
     suit: "stars",
-    imageUrl: "/assets/cards/abjurer.png",
+    imageUrl: getAssetPath("/assets/cards/abjurer.png"),
     flavorText:
       "I see a fallen house guarded by a great stone dragon. Look to the highest peak.",
     explanation:
@@ -404,7 +410,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "stars-5",
     name: "Elementalist",
     suit: "stars",
-    imageUrl: "/assets/cards/elementalist.png",
+    imageUrl: getAssetPath("/assets/cards/elementalist.png"),
     flavorText:
       "The treasure is hidden in a small castle beneath a mountain, guarded by amber giants.",
     explanation:
@@ -414,7 +420,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "stars-6",
     name: "Evoker",
     suit: "stars",
-    imageUrl: "/assets/cards/evoker.png",
+    imageUrl: getAssetPath("/assets/cards/evoker.png"),
     flavorText:
       "Search for the crypt of a wizard ordinaire. His staff is the key.",
     explanation:
@@ -424,7 +430,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "stars-7",
     name: "Illusionist",
     suit: "stars",
-    imageUrl: "/assets/cards/illusionist.png",
+    imageUrl: getAssetPath("/assets/cards/illusionist.png"),
     flavorText:
       "A man is not what he seems. He comes here in a carnival wagon. Therein lies what you seek.",
     explanation:
@@ -434,7 +440,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "stars-8",
     name: "Necromancer",
     suit: "stars",
-    imageUrl: "/assets/cards/necromancer.png",
+    imageUrl: getAssetPath("/assets/cards/necromancer.png"),
     flavorText:
       "A woman hangs above a roaring fire. Find her, and you will find the treasure.",
     explanation:
@@ -445,7 +451,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "stars-9",
     name: "Conjurer",
     suit: "stars",
-    imageUrl: "/assets/cards/conjurer.png",
+    imageUrl: getAssetPath("/assets/cards/conjurer.png"),
     flavorText:
       "I see a dead village, drowned by a river, ruled by one who has brought great evil into the world.",
     explanation: "The treasure is in Baba Lysaga's hut (chapter 10, area U3).",
@@ -454,7 +460,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "stars-master",
     name: "Wizard",
     suit: "stars",
-    imageUrl: "/assets/cards/wizard.png",
+    imageUrl: getAssetPath("/assets/cards/wizard.png"),
     flavorText:
       "Look for a wizard's tower on a lake. Let the wizard's name and servant guide you to that which you seek.",
     explanation:
@@ -466,7 +472,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "coins-1",
     name: "Swashbuckler",
     suit: "coins",
-    imageUrl: "/assets/cards/swashbuckler.png",
+    imageUrl: getAssetPath("/assets/cards/swashbuckler.png"),
     flavorText:
       "I see the skeleton of a deadly warrior, lying on a bed of stone flanked by gargoyles.",
     explanation:
@@ -476,7 +482,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "coins-2",
     name: "Philanthropist",
     suit: "coins",
-    imageUrl: "/assets/cards/philanthropist.png",
+    imageUrl: getAssetPath("/assets/cards/philanthropist.png"),
     flavorText:
       "Look to a place where sickness and madness are bred. Where children once cried, the treasure lies still.",
     explanation:
@@ -486,7 +492,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "coins-3",
     name: "Trader",
     suit: "coins",
-    imageUrl: "/assets/cards/trader.png",
+    imageUrl: getAssetPath("/assets/cards/trader.png"),
     flavorText:
       "Look to the wizard of wines! In wood and sand the treasure hides.",
     explanation:
@@ -496,7 +502,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "coins-4",
     name: "Merchant",
     suit: "coins",
-    imageUrl: "/assets/cards/merchant.png",
+    imageUrl: getAssetPath("/assets/cards/merchant.png"),
     flavorText:
       "Seek a cask that once contained the finest wine, of which not a drop remains.",
     explanation:
@@ -507,7 +513,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "coins-5",
     name: "Guild Member",
     suit: "coins",
-    imageUrl: "/assets/cards/guild-member.png",
+    imageUrl: getAssetPath("/assets/cards/guild-member.png"),
     flavorText:
       "I see a dark room full of bottles. It is the tomb of a guild member.",
     explanation:
@@ -517,7 +523,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "coins-6",
     name: "Beggar",
     suit: "coins",
-    imageUrl: "/assets/cards/beggar.png",
+    imageUrl: getAssetPath("/assets/cards/beggar.png"),
     flavorText:
       "A wounded elf has what you seek. He will part with the treasure to see his dark dreams fulfilled.",
     explanation:
@@ -527,7 +533,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "coins-7",
     name: "Thief",
     suit: "coins",
-    imageUrl: "/assets/cards/thief.png",
+    imageUrl: getAssetPath("/assets/cards/thief.png"),
     flavorText:
       "What you seek lies at the crossroads of life and death, among the buried dead.",
     explanation:
@@ -537,7 +543,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "coins-8",
     name: "Tax Collector",
     suit: "coins",
-    imageUrl: "/assets/cards/tax-collector.png",
+    imageUrl: getAssetPath("/assets/cards/tax-collector.png"),
     flavorText:
       "The Vistani have what you seek. A missing child holds the key to the treasure's release.",
     explanation:
@@ -547,7 +553,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "coins-9",
     name: "Miser",
     suit: "coins",
-    imageUrl: "/assets/cards/miser.png",
+    imageUrl: getAssetPath("/assets/cards/miser.png"),
     flavorText:
       "Look for a fortress inside a fortress, in a place hidden behind fire.",
     explanation:
@@ -558,7 +564,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "coins-master",
     name: "Rogue",
     suit: "coins",
-    imageUrl: "/assets/cards/rogue.png",
+    imageUrl: getAssetPath("/assets/cards/rogue.png"),
     flavorText: "I see a nest of ravens. There you will find the prize.",
     explanation:
       "The treasure is hidden in the attic of the Blue Water Inn (chapter 5, area N2q).",
@@ -569,7 +575,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "glyphs-1",
     name: "Monk",
     suit: "glyphs",
-    imageUrl: "/assets/cards/monk.png",
+    imageUrl: getAssetPath("/assets/cards/monk.png"),
     flavorText:
       "The treasure you seek is hidden behind the sun, in the house of a saint.",
     explanation:
@@ -579,7 +585,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "glyphs-2",
     name: "Missionary",
     suit: "glyphs",
-    imageUrl: "/assets/cards/missionary.png",
+    imageUrl: getAssetPath("/assets/cards/missionary.png"),
     flavorText:
       "I see a garden dusted with snow, watched over by a scarecrow with a sackcloth grin. Look not to the garden but to the guardian.",
     explanation:
@@ -589,7 +595,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "glyphs-3",
     name: "Healer",
     suit: "glyphs",
-    imageUrl: "/assets/cards/healer.png",
+    imageUrl: getAssetPath("/assets/cards/healer.png"),
     flavorText:
       "Look to the west. Find a pool blessed by the light of the white sun.",
     explanation:
@@ -599,7 +605,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "glyphs-4",
     name: "Shepherd",
     suit: "glyphs",
-    imageUrl: "/assets/cards/shepherd.png",
+    imageUrl: getAssetPath("/assets/cards/shepherd.png"),
     flavorText: "Find the mother—she who gave birth to evil.",
     explanation:
       "The treasure lies in the tomb of King Barov and Queen Ravenovia (chapter 4, area K88).",
@@ -609,7 +615,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "glyphs-5",
     name: "Druid",
     suit: "glyphs",
-    imageUrl: "/assets/cards/druid.png",
+    imageUrl: getAssetPath("/assets/cards/druid.png"),
     flavorText:
       "An evil tree grows atop a hill of graves where the ancient dead sleep. The ravens can help you find it. Look for the treasure there.",
     explanation:
@@ -619,7 +625,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "glyphs-6",
     name: "Anarchist",
     suit: "glyphs",
-    imageUrl: "/assets/cards/anarchist.png",
+    imageUrl: getAssetPath("/assets/cards/anarchist.png"),
     flavorText:
       "I see walls of bones, a chandelier of bones, and a table of bones—all that remains of enemies long forgotten.",
     explanation:
@@ -630,7 +636,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "glyphs-7",
     name: "Charlatan",
     suit: "glyphs",
-    imageUrl: "/assets/cards/charlatan.png",
+    imageUrl: getAssetPath("/assets/cards/charlatan.png"),
     flavorText: "I see a lonely mill on a precipice. The treasure lies within.",
     explanation:
       "The treasure lies in the attic of Old Bonegrinder (chapter 6, area O4).",
@@ -639,7 +645,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "glyphs-8",
     name: "Bishop",
     suit: "glyphs",
-    imageUrl: "/assets/cards/bishop.png",
+    imageUrl: getAssetPath("/assets/cards/bishop.png"),
     flavorText:
       "What you seek lies in a pile of treasure, beyond a set of amber doors.",
     explanation:
@@ -649,7 +655,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "glyphs-9",
     name: "Traitor",
     suit: "glyphs",
-    imageUrl: "/assets/cards/traitor.png",
+    imageUrl: getAssetPath("/assets/cards/traitor.png"),
     flavorText:
       "Look for a wealthy woman. A staunch ally of the devil, she keeps the treasure under lock and key, with the bones of an ancient enemy.",
     explanation:
@@ -659,7 +665,7 @@ export const tarokkaDeck: TarokkaCard[] = [
     id: "glyphs-master",
     name: "Priest",
     suit: "glyphs",
-    imageUrl: "/assets/cards/priest.png",
+    imageUrl: getAssetPath("/assets/cards/priest.png"),
     flavorText:
       "You will find what you seek in the castle, amid the ruins of a place of supplication.",
     explanation:

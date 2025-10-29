@@ -80,7 +80,7 @@ export const Card: React.FC<CardProps> = ({
       >
         <div className="card-back">
           <img
-            src="/assets/cards/back.png"
+            src={`${import.meta.env.BASE_URL}assets/cards/back.png`}
             alt="Card back"
           />
         </div>
