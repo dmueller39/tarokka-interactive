@@ -11,9 +11,12 @@ export const tarokkaDeck: TarokkaCard[] = [
     flavorText:
       "He lurks in the darkness where the morning light once shone—a sacred place.",
     explanation: "Strahd faces the characters in the chapel (area K15).",
-    enemyName: "Rictavio",
-    enemyFlavorText:
-      "Look for an entertaining man with a monkey. This man is more than he seems.",
+    enemies: [
+      {
+        name: "Rictavio",
+        flavorText: "Look for an entertaining man with a monkey. This man is more than he seems.",
+      },
+    ],
   },
   {
     id: "high-2",
@@ -23,9 +26,12 @@ export const tarokkaDeck: TarokkaCard[] = [
     imageUrl: "/assets/cards/beast.png",
     flavorText: "The beast sits on his dark throne.",
     explanation: "Strahd faces the characters in the audience hall (area K25).",
-    enemyName: "Zuleika Toranescu",
-    enemyFlavorText:
-      "A werewolf holds a secret hatred for your enemy. Use her hatred to your advantage.",
+    enemies: [
+      {
+        name: "Zuleika Toranescu",
+        flavorText: "A werewolf holds a secret hatred for your enemy. Use her hatred to your advantage.",
+      },
+    ],
   },
   {
     id: "high-3",
@@ -35,9 +41,16 @@ export const tarokkaDeck: TarokkaCard[] = [
     imageUrl: "/assets/cards/broken-one.png",
     flavorText: "He haunts the tomb of the man he envied above all.",
     explanation: "Strahd faces the characters in Sergei's tomb (area K85).",
-    enemyName: "Mad Mage / Donavich",
-    enemyFlavorText:
-      "Your greatest ally will be a wizard. His mind is broken, but his spells are strong.",
+    enemies: [
+      {
+        name: "Mad Mage",
+        flavorText: "Your greatest ally will be a wizard. His mind is broken, but his spells are strong.",
+      },
+      {
+        name: "Donavich",
+        flavorText: "I see a man of faith whose sanity hangs by a thread. He has lost someone close to him.",
+      },
+    ],
   },
   {
     id: "high-4",
@@ -48,9 +61,12 @@ export const tarokkaDeck: TarokkaCard[] = [
     flavorText:
       "He lurks in the depths of darkness, in the one place to which he must return.",
     explanation: "Strahd faces the characters in his tomb (area K86).",
-    enemyName: "None",
-    enemyFlavorText:
-      "Ah, the worst of all truths: You must face the evil of this land alone!",
+    enemies: [
+      {
+        name: "None",
+        flavorText: "Ah, the worst of all truths: You must face the evil of this land alone!",
+      },
+    ],
   },
   {
     id: "high-5",
@@ -60,9 +76,16 @@ export const tarokkaDeck: TarokkaCard[] = [
     imageUrl: "/assets/cards/donjon.png",
     flavorText: "He lurks in a hall of bones, in the dark pits of his castle.",
     explanation: "Strahd faces the characters in the hall of bones (area K67).",
-    enemyName: "Victor Vallakovich / Stella Wachter",
-    enemyFlavorText:
-      "Search for a troubled young man surrounded by wealth and madness. His home is his prison.",
+    enemies: [
+      {
+        name: "Victor Vallakovich",
+        flavorText: "Search for a troubled young man surrounded by wealth and madness. His home is his prison.",
+      },
+      {
+        name: "Stella Wachter",
+        flavorText: "Find a girl driven to insanity, locked in the heart of her dead father's house. Curing her madness is key to your success.",
+      },
+    ],
   },
   {
     id: "high-6",
@@ -73,9 +96,12 @@ export const tarokkaDeck: TarokkaCard[] = [
     flavorText:
       "I see a dark figure on a balcony, looking down upon this tortured land with a twisted smile.",
     explanation: "Strahd faces the characters at the overlook (area K6).",
-    enemyName: "Ismark Kolyanovich",
-    enemyFlavorText:
-      'Seek out the brother of the devil\'s bride. They call him "the lesser," but he has a powerful soul.',
+    enemies: [
+      {
+        name: "Ismark Kolyanovich",
+        flavorText: 'Seek out the brother of the devil\'s bride. They call him "the lesser," but he has a powerful soul.',
+      },
+    ],
   },
   {
     id: "high-7",
@@ -86,9 +112,16 @@ export const tarokkaDeck: TarokkaCard[] = [
     flavorText: "Look to the father's tomb.",
     explanation:
       "Strahd faces the characters in the tomb of King Barov and Queen Ravenovia (area K88).",
-    enemyName: "Sir Godfrey Gwilym / Sir Klutz",
-    enemyFlavorText:
-      "I see a fallen paladin of a fallen order of knights. He lingers like a ghost in a dead dragon's lair.",
+    enemies: [
+      {
+        name: "Sir Godfrey Gwilym",
+        flavorText: "I see a fallen paladin of a fallen order of knights. He lingers like a ghost in a dead dragon's lair.",
+      },
+      {
+        name: "Sir Klutz",
+        flavorText: "Stir the spirit of the clumsy knight whose crypt lies deep within the castle.",
+      },
+    ],
   },
   {
     id: "high-8",
@@ -99,9 +132,16 @@ export const tarokkaDeck: TarokkaCard[] = [
     flavorText:
       "He lurks in the one place to which he must return—a place of death.",
     explanation: "Strahd faces the characters in his tomb (area K86).",
-    enemyName: "Nikolai Wachter / Arrigal",
-    enemyFlavorText:
-      "I see a dead man of noble birth, guarded by his widow. Return life to the dead man's corpse, and he will be your staunch ally.",
+    enemies: [
+      {
+        name: "Nikolai Wachter",
+        flavorText: "I see a dead man of noble birth, guarded by his widow. Return life to the dead man's corpse, and he will be your staunch ally.",
+      },
+      {
+        name: "Arrigal",
+        flavorText: "A man of death named Arrigal will forsake his dark lord to serve your cause. Beware! He has a rotten soul.",
+      },
+    ],
   },
   {
     id: "high-9",
@@ -112,9 +152,16 @@ export const tarokkaDeck: TarokkaCard[] = [
     flavorText:
       "He dwells with the one whose blood sealed his doom, a brother of light snuffed out too soon.",
     explanation: "Strahd faces the characters in Sergei's tomb (area K85).",
-    enemyName: "Parriwimple / Ireena Kolyana",
-    enemyFlavorText:
-      "I see a young man with a kind heart. A mother's boy! He is strong in body but weak of mind. Seek him out in the village of Barovia.",
+    enemies: [
+      {
+        name: "Parriwimple",
+        flavorText: "I see a young man with a kind heart. A mother's boy! He is strong in body but weak of mind. Seek him out in the village of Barovia.",
+      },
+      {
+        name: "Ireena Kolyana",
+        flavorText: "Evil's bride is the one you seek!",
+      },
+    ],
   },
   {
     id: "high-10",
@@ -126,9 +173,16 @@ export const tarokkaDeck: TarokkaCard[] = [
       "Look to great heights. Find the beating heart of the castle. He waits nearby.",
     explanation:
       "Strahd faces the characters in the north tower peak (area K60).",
-    enemyName: "Pidlwick II / Clovin Belview",
-    enemyFlavorText:
-      "What horror is this? I see a man made by a man. Ageless and alone, it haunts the towers of the castle.",
+    enemies: [
+      {
+        name: "Pidlwick II",
+        flavorText: "What horror is this? I see a man made by a man. Ageless and alone, it haunts the towers of the castle.",
+      },
+      {
+        name: "Clovin Belview",
+        flavorText: "Look for a man of music, a man with two heads. He lives in a place of great hunger and sorrow.",
+      },
+    ],
   },
   {
     id: "high-11",
@@ -140,9 +194,12 @@ export const tarokkaDeck: TarokkaCard[] = [
       "The cards can't see where the evil lurks. The mists obscure all!",
     explanation:
       "The card offers no clue about where the final showdown with Strahd will occur. It can happen anywhere you like in Castle Ravenloft. Alternatively, Madam Eva tells the characters to return to her after at least three days, and she will consult the cards again for them, but only to discern the location of their enemy.",
-    enemyName: "Ezmerelda d'Avenir",
-    enemyFlavorText:
-      "A Vistana wanders this land alone, searching for her mentor. She does not stay in one place for long. Seek her out at Saint Markovia's abbey, near the mists.",
+    enemies: [
+      {
+        name: "Ezmerelda d'Avenir",
+        flavorText: "A Vistana wanders this land alone, searching for her mentor. She does not stay in one place for long. Seek her out at Saint Markovia's abbey, near the mists.",
+      },
+    ],
   },
   {
     id: "high-12",
@@ -153,9 +210,12 @@ export const tarokkaDeck: TarokkaCard[] = [
     flavorText: "Look to the mother's tomb.",
     explanation:
       "Strahd faces the characters in the tomb of King Barov and Queen Ravenovia (area K88).",
-    enemyName: "Davian Martikov",
-    enemyFlavorText:
-      "Find the leader of the feathered ones who live among the vines. Though old, he has one more fight left in him.",
+    enemies: [
+      {
+        name: "Davian Martikov",
+        flavorText: "Find the leader of the feathered ones who live among the vines. Though old, he has one more fight left in him.",
+      },
+    ],
   },
   {
     id: "high-13",
@@ -166,9 +226,12 @@ export const tarokkaDeck: TarokkaCard[] = [
     flavorText:
       "He waits for you in a place of wisdom, warmth, and despair. Great secrets are there.",
     explanation: "Strahd faces the characters in the study (area K37).",
-    enemyName: "Kasimir Velikov",
-    enemyFlavorText:
-      "Look for a dusk elf living among the Vistani. He has suffered a great loss and is haunted by dark dreams. Help him, and he will help you in return.",
+    enemies: [
+      {
+        name: "Kasimir Velikov",
+        flavorText: "Look for a dusk elf living among the Vistani. He has suffered a great loss and is haunted by dark dreams. Help him, and he will help you in return.",
+      },
+    ],
   },
   {
     id: "high-14",
@@ -180,9 +243,16 @@ export const tarokkaDeck: TarokkaCard[] = [
       "I see a secret place—a vault of temptation hidden behind a woman of great beauty. The evil waits atop his tower of treasure.",
     explanation:
       'Strahd confronts the characters in the treasury (area K41). "A woman of great beauty" refers to the portrait of Tatyana hanging in the castle\'s study (area K37), which contains a secret door that leads to the treasury.',
-    enemyName: "Arabelle / Vasilka",
-    enemyFlavorText:
-      "I see a child—a Vistana. You must hurry, for her fate hangs in the balance. Find her at the lake!",
+    enemies: [
+      {
+        name: "Arabelle",
+        flavorText: "I see a child—a Vistana. You must hurry, for her fate hangs in the balance. Find her at the lake!",
+      },
+      {
+        name: "Vasilka",
+        flavorText: "I hear a wedding bell, or perhaps a death knell. It calls thee to a mountainside abbey, wherein you will find a woman who is more than the sum of her parts.",
+      },
+    ],
   },
 
   // Swords (Spades)

@@ -13,8 +13,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  justify-content: center;
+  gap: 20px;
   z-index: 1;
+  width: 100%;
+  padding: 20px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .welcome-screen h1 {
@@ -84,6 +96,45 @@
   z-index: 10;
 }
 
+.copy-button-container {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 10;
+}
+
+.copy-button {
+  width: 56px;
+  height: 56px;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy-button:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.copy-confirmation {
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: #0a0a0a;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 @media (max-width: 768px) {
   .welcome-screen h1 {
     font-size: 2.5rem;
@@ -101,5 +152,26 @@
 
   .reset-button {
     bottom: 20px;
+  }
+
+  .copy-button-container {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .copy-button {
+    width: 48px;
+    height: 48px;
+  }
+
+  .copy-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .copy-confirmation {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    right: 60px;
   }
 }

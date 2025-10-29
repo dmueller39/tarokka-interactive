@@ -1,3 +1,8 @@
+export interface TarokkaEnemy {
+  name: string;
+  flavorText: string;
+}
+
 export interface TarokkaCard {
   id: string;
   name: string;
@@ -7,8 +12,7 @@ export interface TarokkaCard {
   flavorText?: string;
   explanation?: string;
   inRavenloft?: boolean;
-  enemyName?: string;
-  enemyFlavorText?: string;
+  enemies?: TarokkaEnemy[];
 }
 
 export type CardPosition = 'deck' | 'drawn' | 'spread';
