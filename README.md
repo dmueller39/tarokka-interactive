@@ -1,33 +1,39 @@
 # Fortunes of Ravenloft - Interactive Tarokka Reading
 
-An interactive web application for performing Tarokka card readings for *Curse of Strahd* and *Strahd Must Die Tonight!* campaigns. Features a beautiful animated coverflow card display and automated reading generation.
+An interactive web application for performing Tarokka card readings for _Curse of Strahd_ and _Strahd Must Die Tonight!_ campaigns. Great for performing a reading over zoom.
 
 🎴 **[Live Demo](https://dmueller39.github.io/tarokka-interactive/)**
 
 ## About
 
-The Tarokka deck is used in the Dungeons & Dragons adventure module *Curse of Strahd* to determine key locations and allies for the party. This app automates the card reading process with:
+The Tarokka deck is used in the Dungeons & Dragons adventure module _Curse of Strahd_ to determine key locations and allies for the party. This app automates the card reading process with:
 
 - Animated coverflow card display showing the full Tarokka deck
 - Support for both **Curse of Strahd** and **Strahd Must Die Tonight!** reading modes
 - Automated card drawing with proper deck filtering rules
 - Complete reading guide with flavor text and explanations
-- Copy-to-clipboard functionality for easy sharing with players
+- Copy-to-clipboard functionality for the dungeon master.
 
 ## Game Modes
 
 ### Curse of Strahd (Standard)
+
 Draws 5 cards following the standard reading:
+
 - 3 cards from the low deck (glyphs, stars, coins, swords, crowns)
 - 2 cards from the high deck
 - Card 4 determines Strahd's Enemy (ally)
 - Card 5 determines Strahd's location
 
 ### Strahd Must Die Tonight!
+
 Modified reading for the one-shot adventure:
+
 - 4 cards from low deck cards with `inRavenloft: true`
 - 1 card from high deck
 - All treasure locations are within Castle Ravenloft
+- Card 4 determines location of ally within Castle Ravenloft.
+- Card 5 determines Strahd's location
 
 ## Technologies Used
 
@@ -39,13 +45,14 @@ Modified reading for the one-shot adventure:
 
 ## Credits & References
 
-- **Game Content**: Based on *Curse of Strahd* by Wizards of the Coast
-- **Strahd Must Die Tonight!**: Adventure module reference for the alternative reading mode
+- **Game Content**: Based on [_Curse of Strahd_](https://marketplace.dndbeyond.com/adventures/curse-of-strahd?pid=SRC-00006) by Wizards of the Coast
+- **Strahd Must Die Tonight!**: How to play Curse of Strahd in a single night outlined [here](https://www.dndbeyond.com/posts/359-strahd-must-die-tonight-how-to-play-ravenloft-in-a).
 - **Card Images**: Beautiful colorized Tarokka card artwork from [this Imgur gallery](https://imgur.com/gallery/color-tarokka-cards-curse-of-strahd-qJhI08z)
 
 ## Development
 
 ### Prerequisites
+
 - Node.js 18+
 - npm or yarn
 
@@ -93,12 +100,14 @@ src/
 ## Features
 
 ### Reading Generation
+
 - Complete reading guide with flavor text for each card position
 - Support for multiple enemy options (pick one format)
 - Automatic formatting with card explanations
 - Copy entire reading to clipboard with one click
 
 ### Card Data
+
 - 54 card full Tarokka deck
 - High deck (14 cards) and low deck suits (40 cards)
 - Complete flavor text and location explanations
@@ -114,16 +123,17 @@ npm run deploy
 ```
 
 This will:
+
 1. Build the production version
 2. Push to the `gh-pages` branch
 3. Update the live site at https://dmueller39.github.io/tarokka-interactive/
 
 ## License
 
-This is a fan-made tool for the *Curse of Strahd* adventure. All game content is © Wizards of the Coast.
+This is a fan-made tool for the _Curse of Strahd_ adventure. All game content is © Wizards of the Coast.
 
 Card artwork from the community-created colorized set.
 
 ---
 
-Built with ❤️ for Dungeon Masters running *Curse of Strahd*
+Built with ❤️ for Dungeon Masters running _Curse of Strahd_
