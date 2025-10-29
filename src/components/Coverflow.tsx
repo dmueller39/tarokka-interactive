@@ -11,10 +11,29 @@ interface CoverflowProps {
 export const Coverflow: React.FC<CoverflowProps> = ({ cards }) => {
   const [shuffledCards, setShuffledCards] = useState<TarokkaCard[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
   // Shuffle cards on mount
   useEffect(() => {
     setShuffledCards(shuffleDeck(cards));
+  }, [cards]);
+
+  // Preload all card images
+  useEffect(() => {
+    if (cards.length === 0) return;
+
+    const imagePromises = cards.map((card) => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = resolve;
+        img.onerror = resolve; // Resolve even on error to not block loading
+        img.src = card.imageUrl;
+      });
+    });
+
+    Promise.all(imagePromises).then(() => {
+      setImagesLoaded(true);
+    });
   }, [cards]);
 
   // Auto-advance with 2 second pause after animation completes (~3s animation + 2s pause)
@@ -39,7 +58,7 @@ export const Coverflow: React.FC<CoverflowProps> = ({ cards }) => {
     };
   }, [shuffledCards]);
 
-  if (shuffledCards.length === 0) return null;
+  if (shuffledCards.length === 0 || !imagesLoaded) return null;
 
   // Calculate positions for visible cards
   const getCardStyle = (offset: number) => {
@@ -69,7 +88,12 @@ export const Coverflow: React.FC<CoverflowProps> = ({ cards }) => {
   }
 
   return (
-    <div className="coverflow-container">
+    <motion.div
+      className="coverflow-container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="coverflow-stage">
         <AnimatePresence initial={false} mode="popLayout">
           {visibleCards.map(({ card, offset, index }) => {
@@ -110,6 +134,6 @@ export const Coverflow: React.FC<CoverflowProps> = ({ cards }) => {
           })}
         </AnimatePresence>
       </div>
-    </div>
+    </motion.div>
   );
 };
